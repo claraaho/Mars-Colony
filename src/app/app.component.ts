@@ -3,29 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{ title }}</h1>
-    <p>You've clicked the dang button {{ clickCount }} times</p>
-    <p>New title: <input (keyup)="changeTitle($event)"></p>
-    <button (click)="updateTitle()">Change that title</button>
+    <a routerLink="/register">Register page</a>
+    <a routerLink="/encounters">Encounters page</a>
+    <a routerLink="/report">Report page</a>
+    <a routerLink="/notfound">Not found page</a>
+    <div class="page">
+      <router-outlet></router-outlet>
+    </div>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
-  title = 'app works!';
-  newTitle = this.title;
-  clickCount = 0;
-
-  updateTitle() {
-    this.clickCount++;
-    this.title = this.newTitle;
-  }
-
-  changeTitle(event) {
-    if(!event || event.target.value == '') {
-      this.newTitle = this.title;
-    } else {
-      this.newTitle = event.target.value;
-    }
-  }
+  
 }

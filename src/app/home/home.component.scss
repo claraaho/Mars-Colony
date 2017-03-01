@@ -1,0 +1,29 @@
+.home-container {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, black, indianred);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: #FFF;
+    h1 {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    a {
+        width: 135px;
+        height: 135px;
+        border: 1px solid #FFF;
+        border-radius: 50%;
+        align-self: center;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+

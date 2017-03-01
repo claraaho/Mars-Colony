@@ -1,0 +1,31 @@
+.encounters-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+h1, a {
+    font-size: 2rem;
+}
+
+.header {
+    padding: 2rem;
+}
+
+.encounters-scroll {
+    flex: 1;
+    text-align: left;
+    overflow: scroll;
+    padding: 0 1rem 2.5rem;
+}
+
+.footer {
+    background: #000;
+    padding: 4rem 2rem;
+    a {
+        color: #FFF;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
