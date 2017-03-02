@@ -13,7 +13,7 @@
     }
 }
     
-.form {
+form {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -34,9 +34,9 @@
             font-size: 1rem;
             margin-bottom: 1.5rem;
             color: #FFF;
+            padding-left: 0.5rem;
             &::placeholder {
                 color: rgb(237, 67, 67);
-                padding-left: 0.5rem;
             }
         }
         input, .select-box {
@@ -49,12 +49,15 @@
             select {
                 background: none;
                 border: none;
-                color: rgb(237, 67, 67);
+                color: #FFF;
                 appearance: none;
                 font-size: 1rem;
                 padding-left: 0.5rem;
                 width: 100%;
                 outline: none;
+            }
+            .ng-pristine {
+                color: rgb(237, 67, 67);
             }
         }
         button {
@@ -66,3 +69,4 @@
         }
     }
 }
+

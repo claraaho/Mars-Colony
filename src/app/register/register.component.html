@@ -1,21 +1,19 @@
 <div class="register-container">
   <h1>Register</h1>
-  <div class="form">
+  <form [formGroup]="registerForm">
     <fieldset>
-      <input type="text" value placeholder="Name"/>
-      <input type="number" value placeholder="Age"/>
+      <input type="text" placeholder="Name" required formControlName="name" name="name"/>
+      <input type="number" placeholder="Age" required formControlName="age" name="age"/>
       <div class="select-box">
-        <select class="occupation">
-	        <option value="placeholder">Select occupation</option>
-          <option value="">Alien Hunter</option>
-          <option value="">Yoga Teacher</option>
-          <option value="">Dust Farmer</option>
-          <option value="">Front-End Developer</option>
+        <select required formControlName="job_id" class="occupation" name="job_id">
+	        <option value="">Select occupation</option>
+          <option *ngFor="let job of marsJobs" value="{{ job.id }}">{{ job.name }}</option>
         </select>
       </div>
     </fieldset>
     <fieldset>
       <a routerLink="/encounters"><button>Check in</button></a>
+      <button type="button" (click)="logColonist()">Log Colonist</button>
     </fieldset>
-  </div>
+  </form>
 </div>

@@ -7,8 +7,13 @@ export interface Colonist {
 
 export class NewColonist {
     name: string;
-    age: number;
-    job_id: Occupation;
+    age: string;
+    job_id: string;
+    constructor(name: string, age: string, job_id: string) {
+        this.name = name;
+        this.age = age;
+        this.job_id = job_id;
+    }
 }
 
 export interface Encounter {
@@ -26,15 +31,15 @@ export class NewEncounter {
     colonist_id: number;
 }
 
-export interface Alien {
+export class Alien {
     type: string;
-    submitted_by: string;
-    id: number;
+    submitted_by?: string;
+    id: string;
     description: string;
 }
 
 export interface Occupation {
     name: string;
-    id: number;
+    id: string;
     description: string;
 }
