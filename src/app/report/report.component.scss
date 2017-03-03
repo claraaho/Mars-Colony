@@ -68,8 +68,8 @@ form {
     }
 }
 
-.ng-invalid.submitting fieldset div{
-    .ng-valid {
+.ng-invalid.submitting fieldset {
+    .ng-valid, div .ng-valid {
         animation: border-pulse 0s infinite;
     }
 }
