@@ -18,7 +18,7 @@ export class ReportComponent implements OnInit {
       { type: 'Domo-kun', id: '1', description: 'rawrrrrrr XD' },
       { type: 'Pedobear', id: '2', description: 'I got candy' },
       { type: 'Protoss', id: '3', description: 'YOU MUST CONSTRUCT ADDITIONAL PYLONS' },
-      { type: 'Zergies', id: '3', description: 'zerg rush!' }
+      { type: 'Zergies', id: '4', description: 'zerg rush!' }
     ];
 
     this.registerForm = new FormGroup({

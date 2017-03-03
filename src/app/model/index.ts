@@ -1,6 +1,6 @@
 export interface Colonist {
     name: string;
-    job: Occupation;
+    job: Job;
     id: number;
     age: number;
 }
@@ -38,7 +38,7 @@ export class Alien {
     description: string;
 }
 
-export interface Occupation {
+export interface Job {
     name: string;
     id: string;
     description: string;

@@ -49,6 +49,7 @@ form {
             select {
                 background: none;
                 border: none;
+                border-radius: 0;
                 color: #FFF;
                 appearance: none;
                 font-size: 1rem;
@@ -56,7 +57,7 @@ form {
                 width: 100%;
                 outline: none;
             }
-            .ng-pristine {
+            .ng-invalid {
                 color: rgb(237, 67, 67);
             }
         }
@@ -70,3 +71,13 @@ form {
     }
 }
 
+.ng-invalid.submitting fieldset {
+    input, .select-box {
+        animation: border-pulse 0.5s infinite;
+    }
+}
+
+@keyframes border-pulse{
+    0% { box-shadow: 0 0 0 1px darkred; }
+    100% { box-shadow: 0 0 0 10px rgba(237, 67, 67, .2); }
+}

@@ -12,18 +12,26 @@
         font-size: 2rem;
     }
     a {
-        width: 135px;
-        height: 135px;
-        border: 1px solid #FFF;
-        border-radius: 50%;
         align-self: center;
+        div {
+            width: 75px;
+            height: 75px;
+            border: 1px solid #FFF;
+            border-radius: 50%;
+        }
     }
     h2 {
         font-size: 1.8rem;
     }
 }
 
-
+@keyframes pulse-4{
+   0%{box-shadow:  0 0 10px 100px #888888 ; opacity:0.2;}
+   25%{box-shadow:  0 0 10px 80px #888888 ; opacity:0;}
+   50%{box-shadow:  0 0 10px 60px #888888 ; opacity:0;}
+   75%{box-shadow:  0 0 10px 40px #888888 ; opacity:0;}
+   100%{box-shadow: 0 0 10px 20px #888888 ; opacity:0;}
+}
 
 
 
