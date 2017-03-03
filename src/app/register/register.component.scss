@@ -29,6 +29,7 @@ form {
             align-self: center;
         }  
         input {
+            height: 1.8rem;
             border: none;
             background: transparent;
             font-size: 1rem;
@@ -42,11 +43,11 @@ form {
         input, .select-box {
             border-bottom: 1px solid #FFF;
             width: 100%;
-            height: 1.8rem;
         }
         .select-box {
             text-align: left;
             select {
+                height: 1.8rem;
                 background: none;
                 border: none;
                 border-radius: 0;
@@ -72,8 +73,14 @@ form {
 }
 
 .ng-invalid.submitting fieldset {
-    input, .select-box {
+    input, select {
         animation: border-pulse 0.5s infinite;
+    }
+}
+
+.ng-invalid.submitting fieldset {
+    .ng-valid {
+        animation: border-pulse 0s infinite;
     }
 }
 

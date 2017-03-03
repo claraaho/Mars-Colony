@@ -67,8 +67,7 @@ export class RegisterComponent implements OnInit {
   postNewColonist(event) {
     event.preventDefault();
     this.clickedSubmit = true;
-    console.log('hi');
-    if(!this.registerForm.invalid) {
+    if(this.registerForm.invalid) {
       
     } else {
       const name = this.registerForm.get('name').value;

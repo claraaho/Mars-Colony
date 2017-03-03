@@ -11,8 +11,10 @@ export class ReportComponent implements OnInit {
 
   alienTypes: Alien[];
   registerForm: FormGroup;
+  clickedSubmit: boolean;
 
   constructor() { 
+    this.clickedSubmit = false;
 
     this.alienTypes = [
       { type: 'Domo-kun', id: '1', description: 'rawrrrrrr XD' },
@@ -41,6 +43,16 @@ export class ReportComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  submitReport(event) {
+    event.preventDefault();
+    this.clickedSubmit = true;
+    if(this.registerForm.invalid) {
+      
+    } else {
+      
+    }
   }
 
 }

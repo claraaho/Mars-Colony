@@ -3,18 +3,20 @@
     <h1>Report Encounter</h1>
     <p>Safety on Mars is your responsibility</p>
 </div>
-<form [formGroup]="registerForm">
+<form [formGroup]="registerForm"
+      [ngClass] = "{ 'submitting': clickedSubmit }"
+      (ngSubmit)="submitReport($event)">
     <fieldset>
       <div class="report-box">
-        <select required formControlName="alien_id" class="alien-type" name="alien_id">
+        <select formControlName="alien_id" class="alien-type" name="alien_id">
 	        <option value="">Select alien type</option>
           <option *ngFor="let alien of alienTypes" value="{{ alien.id }}">{{ alien.type }}</option>
         </select>
       </div>
-      <textarea type="text" placeholder="Action taken" required formControlName="description" name="description"></textarea>
+      <textarea type="text" placeholder="Action taken" formControlName="description" name="description"></textarea>
     </fieldset>
     <fieldset>
-      <a href=""><button>Submit Report</button></a>
+      <a href=""><button type="submit">Submit Report</button></a>
       <button type="button" (click)="logData()">Log data</button>
     </fieldset>
 </form>

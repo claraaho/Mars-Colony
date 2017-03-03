@@ -35,10 +35,11 @@ form {
         .report-box {
             text-align: left;
             border-bottom: 1px solid #FFF;
-            height: 1.8rem;
             select {
+                height: 1.8rem;
                 background: none;
                 border: none;
+                border-radius: 0;
                 color: rgb(237, 67, 67);
                 appearance: none;
                 font-size: 1rem;
@@ -59,4 +60,21 @@ form {
             }
         }
     }
+}
+
+.ng-invalid.submitting fieldset {
+    select, textarea{
+        animation: border-pulse 0.5s infinite;
+    }
+}
+
+.ng-invalid.submitting fieldset div{
+    .ng-valid {
+        animation: border-pulse 0s infinite;
+    }
+}
+
+@keyframes border-pulse{
+    0% { box-shadow: 0 0 0 1px darkred; }
+    100% { box-shadow: 0 0 0 10px rgba(237, 67, 67, .2); }
 }
