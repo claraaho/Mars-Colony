@@ -62,15 +62,11 @@ form {
     }
 }
 
-.ng-invalid.submitting fieldset {
-    select, textarea{
-        animation: border-pulse 0.5s infinite;
-    }
-}
-
-.ng-invalid.submitting fieldset {
-    .ng-valid, div .ng-valid {
-        animation: border-pulse 0s infinite;
+.submitting {
+    select, textarea {
+        &.ng-invalid {
+            animation: border-pulse 0.5s infinite;
+        }
     }
 }
 

@@ -72,15 +72,11 @@ form {
     }
 }
 
-.ng-invalid.submitting fieldset {
+.submitting {
     input, select {
-        animation: border-pulse 0.5s infinite;
-    }
-}
-
-.ng-invalid.submitting fieldset {
-    .ng-valid {
-        animation: border-pulse 0s infinite;
+        &.ng-invalid {
+            animation: border-pulse 0.5s infinite;
+        }
     }
 }
 

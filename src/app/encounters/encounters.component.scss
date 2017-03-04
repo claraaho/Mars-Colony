@@ -18,6 +18,9 @@ h1, a {
     text-align: left;
     overflow: scroll;
     padding: 0 1rem 2.5rem;
+    li {
+        margin-bottom: 1rem;
+    }
 }
 
 .footer {

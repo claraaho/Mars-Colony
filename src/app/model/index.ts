@@ -16,24 +16,30 @@ export class NewColonist {
     }
 }
 
-export interface Encounter {
+export class Encounter {
     id: number;
     date: string;
-    colonist_id: number;
+    colonist_id: string;
     atype: string;
     action: string;
 }
 
 export class NewEncounter {
     atype: string;
-    date: number;
+    date: string;
     action: string;
-    colonist_id: number;
+    colonist_id: string;
+    constructor(atype: string, date: string, action: string, colonist_id: string) {
+        this.atype = atype;
+        this.date = date;
+        this.action = action;
+        this.colonist_id = colonist_id;
+    }
 }
 
 export class Alien {
     type: string;
-    submitted_by?: string;
+    submitted_by: string;
     id: string;
     description: string;
 }

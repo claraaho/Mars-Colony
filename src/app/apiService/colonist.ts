@@ -5,16 +5,18 @@ import 'rxjs/add/operator/map';
 import { Colonist, NewColonist } from '../model';
 import { COLONISTS_URL } from '../model/API';
 
+interface ColonistPostRequest {
+    colonist: NewColonist;
+}
+
 @Injectable()
-
 export class ColonistAPIService {
-    constructor(private http: Http) {
-    }
+    constructor(private http: Http) {}
 
-    saveColonist(newColonist: NewColonist): Observable<Colonist>{
+    saveColonist(newColonist: ColonistPostRequest): Observable<Colonist>{
     const headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+    headers.append('Content-Type', 'application/json');
         return this.http.post(COLONISTS_URL, newColonist, { headers })
-                        .map((res: Response) => res.json().encounter);
+                        .map((res: Response) => res.json().colonist);
     }
 }
