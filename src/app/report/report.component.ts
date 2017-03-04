@@ -3,6 +3,7 @@ import { Alien, NewEncounter } from '../model';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { AliensAPIService } from '../apiService/aliens';
 import { EncountersAPIService } from '../apiService/encounters';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-report',
@@ -19,7 +20,8 @@ export class ReportComponent implements OnInit {
 
   constructor(
     private aliensAPIService: AliensAPIService,
-    private encountersAPIService: EncountersAPIService
+    private encountersAPIService: EncountersAPIService,
+    private router: Router
     ) { 
 
     this.clickedSubmit = false;
@@ -69,7 +71,7 @@ export class ReportComponent implements OnInit {
       this.encountersAPIService.saveNewEncounter(encountersPostRequest)
                               .subscribe((result) => {
                                 console.log('Encounter was saved:', result);
-                                localStorage.setItem("alienName", result.atype.toString());
+                                this.router.navigate(['encounters']);
                               });
     }
   }

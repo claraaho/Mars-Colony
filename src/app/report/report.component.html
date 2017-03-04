@@ -10,7 +10,7 @@
       <div class="report-box">
         <select formControlName="alien_id" class="alien-type" name="alien_id">
 	        <option value="">Select alien type</option>
-          <option *ngFor="let alien of alienTypes" value="{{ alien.id }}">{{ alien.type }}</option>
+          <option *ngFor="let alien of alienTypes" value="{{ alien.type }}">{{ alien.type }}</option>
         </select>
       </div>
       <textarea type="text" placeholder="Action taken" formControlName="description" name="description"></textarea>

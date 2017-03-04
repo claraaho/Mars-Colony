@@ -4,6 +4,7 @@ import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractC
 import { JOBS_URL, COLONISTS_URL } from '../model/API';
 import { ColonistAPIService } from '../apiService/colonist';
 import { JobsAPIService } from '../apiService/jobs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private colonistApiService: ColonistAPIService,
-    private jobsAPIService: JobsAPIService
+    private jobsAPIService: JobsAPIService,
+    private router: Router
     ) {
 
     this.clickedSubmit = false;
@@ -77,6 +79,7 @@ export class RegisterComponent implements OnInit {
                               .subscribe((result) => {
                                 console.log('Colonist was saved:', result);
                                 localStorage.setItem("colonistID", result.id.toString());
+                                this.router.navigate(['encounters']);
                               });
     }
   }
