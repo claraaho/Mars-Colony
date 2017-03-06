@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     h1, button {
-        color: #FFF;
-        font-size: 2rem;
+        color: antiquewhite;
+        font-size: 1.8rem;
     }
     h1 {
         padding: 2rem 1rem;
@@ -32,9 +32,10 @@ form {
             height: 1.8rem;
             border: none;
             background: transparent;
-            font-size: 1rem;
+            font-size: 0.7rem;
             margin-bottom: 1.5rem;
-            color: #FFF;
+            color: antiquewhite;
+            font-family: 'Press Start 2P', cursive;
             padding-left: 0.5rem;
             &::placeholder {
                 color: rgb(237, 67, 67);
@@ -51,12 +52,13 @@ form {
                 background: none;
                 border: none;
                 border-radius: 0;
-                color: #FFF;
+                color: antiquewhite;
                 appearance: none;
-                font-size: 1rem;
+                font-size: 0.7rem;
                 padding-left: 0.5rem;
                 width: 100%;
                 outline: none;
+                font-family: 'Press Start 2P', cursive;
             }
             .ng-invalid {
                 color: rgb(237, 67, 67);
@@ -68,6 +70,8 @@ form {
             cursor: pointer;
             padding: 1rem 2rem;
             width: 100%;
+            font-size: 1.3rem;
+            font-family: 'Press Start 2P', cursive;
         }
     }
 }

@@ -60,9 +60,14 @@ html {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Press Start 2P', cursive;
 }
 
 h1, h2, button {
         font-weight: 100;
-    }
+}
+
+.loading {
+	width: 100px;
+	height: 100px;
+}

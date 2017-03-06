@@ -6,14 +6,15 @@
     background: #000;
 }
 
-h1, button {
-    font-size: 2rem;
-    color: #FFF;
+h1 {
+    font-size: 1.8rem;
+    color: antiquewhite;
+    margin-bottom: 0.5rem;
 }
 
 .header {
     padding: 2rem;
-    color: #FFF;
+    color: antiquewhite;
 }
 
 form {
@@ -30,7 +31,9 @@ form {
             cursor: pointer;
             padding: 1rem 2rem;
             width: 100%;
-            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            color: antiquewhite;
+            font-family: 'Press Start 2P', cursive;
         }
         .report-box {
             text-align: left;
@@ -42,11 +45,12 @@ form {
                 border-radius: 0;
                 color: rgb(237, 67, 67);
                 appearance: none;
-                font-size: 1rem;
+                font-size: 0.7rem;
                 padding-left: 0.5rem;
                 width: 100%;
                 outline: none;
                 line-height: 2;
+                font-family: 'Press Start 2P', cursive;
             }
         }
         textarea {
@@ -54,7 +58,8 @@ form {
             width: 100%;
             margin-top: 1rem;
             padding: 0.5rem;
-            font-size: 1rem;
+            font-size: 0.7rem;
+            font-family: 'Press Start 2P', cursive;
             &::placeholder {
                 color: rgb(237, 67, 67);
             }

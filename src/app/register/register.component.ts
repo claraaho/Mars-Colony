@@ -51,10 +51,6 @@ export class RegisterComponent implements OnInit {
      }
    }
 
-  logColonist() {
-     console.log(this.registerForm);
-   }
-
   ngOnInit() {}
 
   getMarsJobs() {

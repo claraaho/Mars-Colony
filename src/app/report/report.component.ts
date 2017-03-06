@@ -41,11 +41,6 @@ export class ReportComponent implements OnInit {
      }
    }
 
-  logData() {
-     console.log(this.registerForm);
-
-   }
-
   ngOnInit() {}
 
   getAliens() {
@@ -65,7 +60,6 @@ export class ReportComponent implements OnInit {
       const action = this.registerForm.get('description').value;
       const date = new Date().toISOString().substring(0,10);
       const colonist_id = localStorage.getItem("colonistID");
-      console.log(colonist_id);
       const newEncounter = new NewEncounter(atype, date, action, colonist_id);
       const encountersPostRequest = { encounter: newEncounter }
       this.encountersAPIService.saveNewEncounter(encountersPostRequest)
