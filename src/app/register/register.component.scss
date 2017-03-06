@@ -1,90 +1,97 @@
 .register-container {
-    height: 100vh;
-    background: #000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    h1, button {
-        color: antiquewhite;
-        font-size: 1.8rem;
-    }
-    h1 {
-        padding: 2rem 1rem;
-    }
+  height: 100vh;
+  background: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  h1,
+  button {
+    color: antiquewhite;
+    font-size: 1.8rem;
+  }
+  h1 {
+    padding: 2rem 1rem;
+  }
 }
-    
+
 form {
-    padding: 0 2rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  fieldset {
     display: flex;
-    flex-direction: column;
-    flex: 4;
-    fieldset {
-        display: flex;
-        border: none;
-        padding: 0;
-        margin: 0;
-        flex: 1;
-        width: 100%;
-        &:last-child {
-            align-self: center;
-        }  
-        input {
-            height: 1.8rem;
-            border: none;
-            background: transparent;
-            font-size: 0.7rem;
-            margin-bottom: 1.5rem;
-            color: antiquewhite;
-            font-family: 'Press Start 2P', cursive;
-            padding-left: 0.5rem;
-            &::placeholder {
-                color: rgb(237, 67, 67);
-            }
-        }
-        input, .select-box {
-            border-bottom: 1px solid #FFF;
-            width: 100%;
-        }
-        .select-box {
-            text-align: left;
-            select {
-                height: 1.8rem;
-                background: none;
-                border: none;
-                border-radius: 0;
-                color: antiquewhite;
-                appearance: none;
-                font-size: 0.7rem;
-                padding-left: 0.5rem;
-                width: 100%;
-                outline: none;
-                font-family: 'Press Start 2P', cursive;
-            }
-            .ng-invalid {
-                color: rgb(237, 67, 67);
-            }
-        }
-        button {
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            padding: 1rem 2rem;
-            width: 100%;
-            font-size: 1.3rem;
-            font-family: 'Press Start 2P', cursive;
-        }
+    border: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    width: 100%;
+    &:last-child {
+      align-self: center;
     }
+    input {
+      height: 1.8rem;
+      border: none;
+      background: transparent;
+      font-size: 0.7rem;
+      margin-bottom: 1.5rem;
+      color: antiquewhite;
+      font-family: 'Press Start 2P', cursive;
+      padding-left: 0.5rem;
+      &::placeholder {
+        color: rgb(237, 67, 67);
+      }
+    }
+    input,
+    .select-box {
+      border-bottom: 1px solid #FFF;
+      width: 100%;
+    }
+    .select-box {
+      text-align: left;
+      select {
+        height: 1.8rem;
+        background: none;
+        border: none;
+        border-radius: 0;
+        color: antiquewhite;
+        appearance: none;
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+        width: 100%;
+        outline: none;
+        font-family: 'Press Start 2P', cursive;
+      }
+      .ng-invalid {
+        color: rgb(237, 67, 67);
+      }
+    }
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      width: 100%;
+      font-size: 1.3rem;
+      font-family: 'Press Start 2P', cursive;
+    }
+  }
 }
 
 .submitting {
-    input, select {
-        &.ng-invalid {
-            animation: border-pulse 0.5s infinite;
-        }
+  input,
+  select {
+    &.ng-invalid {
+      animation: border-pulse 0.5s infinite;
     }
+  }
 }
 
-@keyframes border-pulse{
-    0% { box-shadow: 0 0 0 1px darkred; }
-    100% { box-shadow: 0 0 0 10px rgba(237, 67, 67, .2); }
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 1px darkred;
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(237, 67, 67, .2);
+  }
 }

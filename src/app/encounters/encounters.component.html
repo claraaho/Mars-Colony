@@ -4,12 +4,14 @@
     <p>See an Alien? <span>Report that sh!t</span></p>
   </div>
   <ul class="encounters-scroll">
-      <li *ngFor="let list of encountersList" class="encounters-wrapper">
-        <p>{{ list.date }} - {{ list.atype }}</p>   
-        <p>{{ list.action }}</p>
-      </li>
+    <li *ngFor="let list of encountersList" class="encounters-wrapper">
+      <p>{{ list.date }} - {{ list.atype }}</p>
+      <p>{{ list.action }}</p>
+    </li>
   </ul>
   <div class="footer">
-      <a routerLink="/report"><h2>Report Encounter</h2></a>
+    <a routerLink="/report">
+      <h2>Report Encounter</h2>
+    </a>
   </div>
 </div>

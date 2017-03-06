@@ -2,10 +2,8 @@
   <div class="header">
     <h1>Report Encounter</h1>
     <p>You want us to be safe or nah?</p>
-</div>
-<form [formGroup]="registerForm"
-      [ngClass] = "{ 'submitting': clickedSubmit }"
-      (ngSubmit)="submitReport($event)">
+  </div>
+  <form [formGroup]="registerForm" [ngClass]="{ 'submitting': clickedSubmit }" (ngSubmit)="submitReport($event)">
     <fieldset>
       <div class="report-box">
         <select formControlName="alien_id" class="alien-type" name="alien_id">
@@ -18,4 +16,4 @@
     <fieldset>
       <a href=""><button type="submit">Submit Report</button></a>
     </fieldset>
-</form>
+  </form>
